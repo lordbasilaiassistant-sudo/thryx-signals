@@ -45,7 +45,7 @@ export default function Home() {
 
   const fetchSignals = async () => {
     try {
-      const res = await fetch("/api/signals");
+      const res = await fetch("https://thryx.mom/api/signals/feed");
       const data = await res.json();
       if (data.signals) {
         setSignals(data.signals);

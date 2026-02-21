@@ -10,7 +10,7 @@ export default function TokenPage() {
 
   useEffect(() => {
     if (!address) return;
-    fetch("/api/analyze", {
+    fetch("https://thryx.mom/api/signals/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address }),
